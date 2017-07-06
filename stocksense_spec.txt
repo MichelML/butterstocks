@@ -1,0 +1,62 @@
+** Features **
+- Stock picker/searcher
+- Stock watcher with chart
+- Comparator of stocks over any period of time
+- Multiple portfolio development management
+- Financial computation of historical data for investment decisions
+- Direct investment connecting to a stock buying app API
+
+** Technologies **
+Languages
+- Typescript for front-end x
+- Clojure for lambdas
+
+** Linter **
+- JS standard with typescript plugin x
+
+** JS technologies for development **
+- Moment.js x
+- React/Redux x
+- react-router
+
+** Style technologies **
+- MDL lite x (includes a css reset)
+- SASS x
+- autoprefixer x
+
+** Compilation **
+- Webpack 3 x
+- npm scripts
+
+** Testing **
+- Jasmine x
+- Enzyme x
+- Istanbul (coverage) x
+- Codecov (coverage) x
+
+** Architecture ** 
+- Serverless application 
+
+** Hosting **
+- Cloudfront
+- AWS lambdao
+
+** Authentication ** 
+- Google Auth (OAUTH 2)
+- Linkedin (OAUTH 2)
+
+** Continuous Integration ** 
+- Circle CI
+
+** Data base **
+- Postgre SQL
+- Redis for caching  (web worker or defaults to memcache) ??
+
+** Progressive web app set up **
+TODO 
+
+** vim environment **
+
+
+
+
