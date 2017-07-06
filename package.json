@@ -1,5 +1,5 @@
 {
-  "name": "stocksense",
+  "name": "butterstocks",
   "version": "0.1.0",
   "description": "A cross-platform stock market analysis application for sound investment decisions ",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "build": "node node_modules/webpack/bin/webpack",
     "watch": "node node_modules/webpack/bin/webpack --progress --watch",
     "start": "node node_modules/webpack-dev-server/bin/webpack-dev-server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Michel Moreau",
   "license": "ISC",
