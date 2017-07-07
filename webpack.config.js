@@ -1,7 +1,8 @@
 module.exports = {
-  entry: './src/typescript/index.ts',
+  entry: './src/ts/index.ts',
   output: {
-    filename: './dist/bundle.js'
+    filename: './dist/bundle.js',
+    publicPath: '/dist/'
 
   },
   resolve: {

@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "outFile": "./spec/specs.js",
+    "sourceMap": true
+  },
+  "include": [
+    "spec/**/*.ts"
+  ]
+}

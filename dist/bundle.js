@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
@@ -72,7 +72,6 @@
 exports.__esModule = true;
 var hello_ts_1 = __webpack_require__(1);
 hello_ts_1.hello();
-console.log('it all starts hereeto!!!');
 
 
 /***/ }),
@@ -82,7 +81,7 @@ console.log('it all starts hereeto!!!');
 "use strict";
 
 exports.__esModule = true;
-exports.hello = function () { return console.log('hello!!!!!!!!!\nhello!'); };
+exports.hello = function () { return console.log('hello!!!!!!!!!\nhello!!!!!!!!!alskdjfh'); };
 
 
 /***/ })
