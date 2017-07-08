@@ -1,25 +1,15 @@
-const fs = require('fs')
-const exec = require('child_process').exec
-const paths = ['./spec']
+const watch = require('watch')
+const sh = require('shelljs')
 
-const npmTest = (eventType) => {
-  if (eventType === 'change') {
-    exec('npm test', {stdio: 'inherit'}, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-      console.log(`stderr: ${stderr}`);
-    })
-  }
-}
-
-const watch = () => {
-  paths.forEach(path => fs.watch(path, {encoding: 'buffer', recursive: true}, npmTest))
-}
-
-
-if (require.main === module) {
-  watch()
-}
+watch.createMonitor('./spec', function (monitor) {
+  monitor.files['./spec/specs.js'] // Stat object for my zshrc.
+  monitor.on('created', function (f, stat) {
+    if (/specs\.js$/.test(f)) sh.exec('node node_modules/jasmine/bin/jasmine.js ./spec/specs.js')
+  })
+  monitor.on('changed', function (f, curr, prev) {
+    if (/specs\.js$/.test(f)) sh.exec('node node_modules/jasmine/bin/jasmine.js ./spec/specs.js')
+  })
+  monitor.on('removed', function (f, stat) {
+    if (/specs\.js$/.test(f)) sh.exec('node node_modules/jasmine/bin/jasmine.js ./spec/specs.js')
+  })
+})
