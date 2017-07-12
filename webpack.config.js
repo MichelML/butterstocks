@@ -3,16 +3,15 @@ module.exports = {
   output: {
     filename: './dist/bundle.js',
     publicPath: '/dist/'
-
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
   },
   module: {
-    loaders: [
-    { test: /\.tsx?$/, loader: 'ts-loader' }
-    ],
-    rules: [{
+    rules: [
+    { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+    { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
+    {
       test: /\.scss$/,
       use: [{
         loader: "style-loader" // creates style nodes from JS strings
@@ -24,5 +23,9 @@ module.exports = {
         loader: "sass-loader" // compiles Sass to CSS
       }]
     }]
-  }
+  },
+  externals: {
+    "react": "React",
+    "react-dom": "ReactDOM"
+  },
 }

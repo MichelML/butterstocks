@@ -1,4 +1,4 @@
-import Polyglot from 'node-polyglot'
+import * as Polyglot from 'node-polyglot'
 
 export const polyglot = new Polyglot()
 export const locales = {
